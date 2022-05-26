@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sakklepesek_NagyLaszlo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Sakklépések - Nagy László" Height="550" Width="600">
     <Grid>
-        
+        <Label Content="Kérlek válassz ki egy bábut:" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="225,14,0,0" VerticalAlignment="Top" Width="203"/>
+
     </Grid>
 </Window>
