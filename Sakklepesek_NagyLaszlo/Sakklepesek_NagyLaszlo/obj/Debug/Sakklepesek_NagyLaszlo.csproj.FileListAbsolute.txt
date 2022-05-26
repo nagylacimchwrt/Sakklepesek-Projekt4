@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\bin\Debug\Sakklepesek_NagyLaszlo.exe.config
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\bin\Debug\Sakklepesek_NagyLaszlo.exe
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\bin\Debug\Sakklepesek_NagyLaszlo.pdb
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo_MarkupCompile.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo_MarkupCompile.lref
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.g.resources
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.Properties.Resources.resources
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.exe
+C:\Users\user\Desktop\Mechwart\prog gyak 2021-2022\Sakklepesek-projekt4\Sakklepesek-Projekt4\Sakklepesek_NagyLaszlo\Sakklepesek_NagyLaszlo\obj\Debug\Sakklepesek_NagyLaszlo.pdb
