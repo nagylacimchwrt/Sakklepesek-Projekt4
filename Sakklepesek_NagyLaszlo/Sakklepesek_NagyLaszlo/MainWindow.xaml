@@ -10,6 +10,26 @@
         <Label Content="Kérlek válassz ki egy bábut:" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="babuComboBox" HorizontalAlignment="Left" Margin="225,14,0,0" VerticalAlignment="Top" Width="203"/>
         <Canvas x:Name="tabla" HorizontalAlignment="Left" Height="363" Margin="43,56,0,0" VerticalAlignment="Top" Width="502"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="7" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="6" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="10,385,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
+        <Label Content="A" HorizontalAlignment="Left" Margin="65,425,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="B" HorizontalAlignment="Left" Margin="130,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="C" HorizontalAlignment="Left" Margin="190,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="D" HorizontalAlignment="Left" Margin="255,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="E" HorizontalAlignment="Left" Margin="315,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="F" HorizontalAlignment="Left" Margin="380,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="G" HorizontalAlignment="Left" Margin="440,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="H" HorizontalAlignment="Left" Margin="505,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
+        <Label Content="A bábu aktuális pozíciója:" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lehetséges lépések:" HorizontalAlignment="Left" Margin="10,481,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="159,455,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="130,481,0,0" VerticalAlignment="Top" Width="415"/>
 
     </Grid>
 </Window>
