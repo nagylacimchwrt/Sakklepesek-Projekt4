@@ -8,7 +8,7 @@
         Title="Sakklépések - Nagy László" Height="550" Width="600">
     <Grid>
         <Label Content="Kérlek válassz ki egy bábut:" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="225,14,0,0" VerticalAlignment="Top" Width="203"/>
+        <ComboBox x:Name="babuComboBox" HorizontalAlignment="Left" Margin="225,14,0,0" VerticalAlignment="Top" Width="203"/>
         <Canvas x:Name="tabla" HorizontalAlignment="Left" Height="363" Margin="43,56,0,0" VerticalAlignment="Top" Width="502"/>
 
     </Grid>

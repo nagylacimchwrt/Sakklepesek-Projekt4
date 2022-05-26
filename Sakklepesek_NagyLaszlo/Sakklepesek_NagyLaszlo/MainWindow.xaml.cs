@@ -26,6 +26,14 @@ namespace Sakklepesek_NagyLaszlo
         {
             InitializeComponent();
             TablaLetrehozasa();
+
+            babuComboBox.Items.Add("Fehér Gyalog");
+            babuComboBox.Items.Add("Fekete Gyalog");
+            babuComboBox.Items.Add("Ló");
+            babuComboBox.Items.Add("Bástya");
+            babuComboBox.Items.Add("Futó");
+            babuComboBox.Items.Add("Király");
+            babuComboBox.Items.Add("Királynő");
         }
 
         private void TablaLetrehozasa()
