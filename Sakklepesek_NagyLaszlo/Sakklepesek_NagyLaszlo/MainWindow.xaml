@@ -33,7 +33,7 @@
         <Label Content="A bábu aktuális pozíciója:" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
         <Label Content="Lehetséges lépések:" HorizontalAlignment="Left" Margin="142.771,450,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="1"/>
         <Label x:Name="aktualisPozicioLabel" Content="" HorizontalAlignment="Left" Margin="10,479,0,0" VerticalAlignment="Top" Width="144" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label x:Name="lehetsegesLepesekLabel" Content="" HorizontalAlignment="Left" Margin="142.771,479,0,0" VerticalAlignment="Top" Width="355" FontSize="14" Grid.Column="1"/>
+        <Label x:Name="lehetsegesLepesekLabel" Content="" HorizontalAlignment="Left" Margin="143,479,0,0" VerticalAlignment="Top" Width="355" FontSize="14" Grid.Column="1"/>
 
     </Grid>
 </Window>
