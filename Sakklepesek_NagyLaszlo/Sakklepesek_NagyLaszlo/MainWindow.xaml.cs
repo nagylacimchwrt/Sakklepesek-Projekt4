@@ -490,6 +490,8 @@ namespace Sakklepesek_NagyLaszlo
 
             tablaUjraSzin();
             szinezGombokat(currentBabu.odaLep);
+            aktualisPozicio();
+            lehetsegesLepesek();
         }
 
         private List<int> Index(Button gomb)
@@ -544,6 +546,26 @@ namespace Sakklepesek_NagyLaszlo
             currentBabu.lepesLehetosegek(Index(currentBabu.currentButton));
             tablaUjraSzin();
             szinezGombokat(currentBabu.odaLep);
+            aktualisPozicio();
+            lehetsegesLepesek();
+        }
+
+        private void aktualisPozicio()
+        {
+            aktualisPozicioLabel.Content = " " + (Index(currentBabu.currentButton)[0] + 1) + "; " + (Index(currentBabu.currentButton)[1] + 1); 
+        }
+
+        public void lehetsegesLepesek()
+        {
+            lehetsegesLepesekLabel.Content = " ";
+            foreach (var ertek in currentBabu.odaLep)
+            {
+                foreach (var helyzet in ertek)
+                {
+                    lehetsegesLepesekLabel.Content += helyzet + ";";
+                }
+                lehetsegesLepesekLabel.Content += " \u00BB ";
+            }
         }
     }
 }
