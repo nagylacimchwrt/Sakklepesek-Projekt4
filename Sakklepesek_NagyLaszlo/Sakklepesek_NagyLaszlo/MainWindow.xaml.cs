@@ -23,7 +23,7 @@ namespace Sakklepesek_NagyLaszlo
         int meret = 8;
         Button[,] mezok;
         Babu currentBabu;
-        //Babu feherGyalog;
+        Babu feherGyalog;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,28 +37,22 @@ namespace Sakklepesek_NagyLaszlo
             babuComboBox.Items.Add("Király");
             babuComboBox.Items.Add("Királynő");
 
+            
+            //Fehér gyalog bábú
             List<int> kezdoHely = new List<int>();
             kezdoHely.Add(3);
-            kezdoHely.Add(2);
+            kezdoHely.Add(3);
 
             List<List<int>> lepesekLista = new List<List<int>>();
             List<int> lepes1 = new List<int>();
-            lepes1.Add(1);
-            lepes1.Add(1);
 
             List<int> lepes2 = new List<int>();
-            lepes2.Add(2);
-            lepes2.Add(1);
-
-            lepesekLista.Add(lepes1);
+            lepes2.Add(-1);
+            lepes2.Add(0);
             lepesekLista.Add(lepes2);
 
-            /*Fehér gyalog
-            List<int> kezdoHely = new List<int>();
-            kezdoHely.Add(1);
-            kezdoHely.Add(1);*/
-
-            currentBabu = new Babu(mezok, kezdoHely, lepesekLista, "\u2659");
+            feherGyalog = new Babu(mezok, kezdoHely, lepesekLista, "\u2659");
+            currentBabu = feherGyalog;
             szinezGombokat(currentBabu.odaLep);
         }
 
@@ -74,8 +68,8 @@ namespace Sakklepesek_NagyLaszlo
                     negyzet.Width = tabla.Width / meret;
                     negyzet.Height = tabla.Height / meret;
                     negyzet.Margin = new Thickness(tabla.Width / meret * j, tabla.Height / meret * i, 0, 0);
-
                     negyzet.Click += Mozgatas;
+                    negyzet.Content = " ";
 
                     tabla.Children.Add(negyzet);
                     mezok[i, j] = negyzet;
@@ -139,41 +133,84 @@ namespace Sakklepesek_NagyLaszlo
                 this.lepesekLista = lepesekLista;
                 currentButton = mezok[kezdoHely[0], kezdoHely[1]];
                 this.UniCode = UniCode;
-                odaLep = new List<List<int>>();
-
-                for (int i = 0; i < lepesekLista.Count; i++)
-                {
-                    List<int> helyzetek = new List<int>();
-                    helyzetek.Add(kezdoHely[0] + lepesekLista[i][0]);
-                    helyzetek.Add(kezdoHely[1] + lepesekLista[i][1]);
-                    odaLep.Add(helyzetek);
-                }
+                currentButton.Content = UniCode;
+                lepesLehetosegek(kezdoHely);
+                
             }
 
             public void Mozgas(List<int> kovihely)
             {
-                currentButton.Content = "";
-
+                if (mezok[kovihely[0], kovihely[1]].Content.ToString() != " ") return;
+                bool lephet = false;
+                foreach (var helyzet in odaLep)
+                {
+                    if (helyzet[0] == kovihely[0] && helyzet[1] == kovihely[1])
+                    {
+                        lephet = true;
+                    }
+                }
+                if (!lephet) return;
+                
+                currentButton.Content = " ";
                 currentButton = mezok[kovihely[0], kovihely[1]];
                 currentButton.Content = UniCode;
+                lepesLehetosegek(kovihely);
+            }
+
+            public void lepesLehetosegek(List<int> kezdoHely)
+            {
+                odaLep = new List<List<int>>();
+
+                for (int i = 0; i < lepesekLista.Count; i++)
+                {
+                    try
+                    {
+                        List<int> helyzetek = new List<int>();
+                        helyzetek.Add(kezdoHely[0] + lepesekLista[i][0]);
+                        helyzetek.Add(kezdoHely[1] + lepesekLista[i][1]);
+                        if (mezok[helyzetek[0], helyzetek[1]].Content.ToString() == " ")
+                        {
+                            odaLep.Add(helyzetek);
+                        }
+                    }
+                    catch(IndexOutOfRangeException)
+                    {
+                    }
+                }
             }
 
         }
 
         public void szinezGombokat(List<List<int>> lepesekLista)
         {
+            /*if (lepesekLista == null)
+            {
+                return;
+            }*/
             foreach (var helyzet in lepesekLista)
             {
-                mezok[helyzet[0], helyzet[1]].Background = Brushes.LightGray;
+                try
+                {
+                    mezok[helyzet[0], helyzet[1]].Background = Brushes.Red;
+                }
+                catch (IndexOutOfRangeException)
+                {
+
+                }
             }
         }
 
 
         private void Mozgatas(object sender, RoutedEventArgs e)
         {
+            /*if (currentBabu == null)
+            {
+                return;
+            }*/
             currentBabu.Mozgas(Index((Button)sender));
-            szinezGombokat(currentBabu.odaLep);
+
             tablaUjraSzin();
+            szinezGombokat(currentBabu.odaLep);
         }
 
         private List<int> Index(Button gomb)
