@@ -60,18 +60,17 @@ namespace Sakklepesek_NagyLaszlo
 
             feherGyalog = new Babu(mezok, kezdoHely, lepesekLista, "\u2659");
             currentBabu = feherGyalog;
-            szinezGombokat(currentBabu.odaLep);
             //<------------------------------------->
 
 
             //---Fekete gyalog bábú---
             List<int> feketeGyalogHelye = new List<int>();
-            feketeGyalogHelye.Add(6);
-            feketeGyalogHelye.Add(6);
+            feketeGyalogHelye.Add(4);
+            feketeGyalogHelye.Add(5);
 
             List<List<int>> feketeGyalogLista = new List<List<int>>();
             List<int> feketeLepes = new List<int>();
-            feketeLepes.Add(1);
+            feketeLepes.Add(-1);
             feketeLepes.Add(0);
             feketeGyalogLista.Add(feketeLepes);
 
@@ -510,6 +509,41 @@ namespace Sakklepesek_NagyLaszlo
                 }
             }
             return null;
+        }
+
+        private void babuComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (babuComboBox.SelectedItem.ToString() == "Fehér Gyalog")
+            {
+                currentBabu = feherGyalog;
+            }
+            else if (babuComboBox.SelectedItem.ToString() == "Fekete Gyalog")
+            {
+                currentBabu = feketeGyalog;
+            }
+            else if (babuComboBox.SelectedItem.ToString() == "Ló")
+            {
+                currentBabu = lo;
+            }
+            else if (babuComboBox.SelectedItem.ToString() == "Bástya")
+            {
+                currentBabu = Bastya;
+            }
+            else if (babuComboBox.SelectedItem.ToString() == "Futó")
+            {
+                currentBabu = Futo;
+            }
+            else if (babuComboBox.SelectedItem.ToString() == "Király")
+            {
+                currentBabu = Kiraly;
+            }
+            else if (babuComboBox.SelectedItem.ToString() == "Királynő")
+            {
+                currentBabu = kiralyNo;
+            }
+            currentBabu.lepesLehetosegek(Index(currentBabu.currentButton));
+            tablaUjraSzin();
+            szinezGombokat(currentBabu.odaLep);
         }
     }
 }
