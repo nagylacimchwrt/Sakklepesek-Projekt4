@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="Sakklépések - Nagy László" Height="550" Width="600">
     <Grid>
-        <Label Content="Kérlek válassz ki egy bábut:" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox x:Name="babuComboBox" HorizontalAlignment="Left" Margin="273,10,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="babuComboBox_SelectionChanged" RenderTransformOrigin="0.487,0.305" Height="31" FontSize="14"/>
-        <Canvas x:Name="tabla" HorizontalAlignment="Left" Height="363" Margin="43,56,0,0" VerticalAlignment="Top" Width="502"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Kérlek válassz ki egy bábut:" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <ComboBox x:Name="babuComboBox" HorizontalAlignment="Left" Margin="203,10,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="babuComboBox_SelectionChanged" RenderTransformOrigin="0.487,0.305" Height="31" FontSize="14" Grid.Column="1"/>
+        <Canvas x:Name="tabla" HorizontalAlignment="Left" Height="363" Margin="43,56,0,0" VerticalAlignment="Top" Width="502" Grid.ColumnSpan="2"/>
         <Label Content="A" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
         <Label Content="B" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
         <Label Content="C" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
@@ -18,18 +22,18 @@
         <Label Content="F" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
         <Label Content="G" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
         <Label Content="H" HorizontalAlignment="Left" Margin="10,385,0,0" VerticalAlignment="Top" Height="24" Width="28" FontWeight="Bold"/>
-        <Label Content="1" HorizontalAlignment="Left" Margin="65,425,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="2" HorizontalAlignment="Left" Margin="130,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="3" HorizontalAlignment="Left" Margin="190,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="4" HorizontalAlignment="Left" Margin="255,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="5" HorizontalAlignment="Left" Margin="315,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="6" HorizontalAlignment="Left" Margin="380,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="7" HorizontalAlignment="Left" Margin="440,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="8" HorizontalAlignment="Left" Margin="505,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold"/>
-        <Label Content="A bábu aktuális pozíciója:" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label Content="Lehetséges lépések:" HorizontalAlignment="Left" Margin="227,450,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label x:Name="aktualisPozicioLabel" Content="" HorizontalAlignment="Left" Margin="10,479,0,0" VerticalAlignment="Top" Width="144" FontSize="14"/>
-        <Label x:Name="lehetsegesLepesekLabel" Content="" HorizontalAlignment="Left" Margin="227,479,0,0" VerticalAlignment="Top" Width="355" FontSize="14"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="65,425,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="45.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="105.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="170.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="230.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="6" HorizontalAlignment="Left" Margin="295.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="7" HorizontalAlignment="Left" Margin="355.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="420.771,424,0,0" VerticalAlignment="Top" Width="28" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="A bábu aktuális pozíciója:" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Lehetséges lépések:" HorizontalAlignment="Left" Margin="142.771,450,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="1"/>
+        <Label x:Name="aktualisPozicioLabel" Content="" HorizontalAlignment="Left" Margin="10,479,0,0" VerticalAlignment="Top" Width="144" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label x:Name="lehetsegesLepesekLabel" Content="" HorizontalAlignment="Left" Margin="142.771,479,0,0" VerticalAlignment="Top" Width="355" FontSize="14" Grid.Column="1"/>
 
     </Grid>
 </Window>

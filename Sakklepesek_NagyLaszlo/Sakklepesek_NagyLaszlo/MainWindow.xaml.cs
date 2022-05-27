@@ -462,15 +462,11 @@ namespace Sakklepesek_NagyLaszlo
 
         public void szinezGombokat(List<List<int>> lepesekLista)
         {
-            /*if (lepesekLista == null)
-            {
-                return;
-            }*/
             foreach (var helyzet in lepesekLista)
             {
                 try
                 {
-                    mezok[helyzet[0], helyzet[1]].Background = Brushes.Red;
+                    mezok[helyzet[0], helyzet[1]].Background = Brushes.LightGreen;
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -482,10 +478,6 @@ namespace Sakklepesek_NagyLaszlo
 
         private void Mozgatas(object sender, RoutedEventArgs e)
         {
-            /*if (currentBabu == null)
-            {
-                return;
-            }*/
             currentBabu.Mozgas(Index((Button)sender));
 
             tablaUjraSzin();
