@@ -24,6 +24,13 @@ namespace Sakklepesek_NagyLaszlo
         Button[,] mezok;
         Babu currentBabu;
         Babu feherGyalog;
+        Babu feketeGyalog;
+        Babu lo;
+        Babu Bastya;
+        Babu Futo;
+        Babu Kiraly;
+        Babu kiralyNo;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,7 +45,7 @@ namespace Sakklepesek_NagyLaszlo
             babuComboBox.Items.Add("Királynő");
 
             
-            //Fehér gyalog bábú
+            //---Fehér gyalog bábú---
             List<int> kezdoHely = new List<int>();
             kezdoHely.Add(3);
             kezdoHely.Add(3);
@@ -54,6 +61,279 @@ namespace Sakklepesek_NagyLaszlo
             feherGyalog = new Babu(mezok, kezdoHely, lepesekLista, "\u2659");
             currentBabu = feherGyalog;
             szinezGombokat(currentBabu.odaLep);
+            //<------------------------------------->
+
+
+            //---Fekete gyalog bábú---
+            List<int> feketeGyalogHelye = new List<int>();
+            feketeGyalogHelye.Add(6);
+            feketeGyalogHelye.Add(6);
+
+            List<List<int>> feketeGyalogLista = new List<List<int>>();
+            List<int> feketeLepes = new List<int>();
+            feketeLepes.Add(1);
+            feketeLepes.Add(0);
+            feketeGyalogLista.Add(feketeLepes);
+
+            feketeGyalog = new Babu(mezok, feketeGyalogHelye, feketeGyalogLista, "\u265F");
+            //<------------------------------------->
+
+
+            //---Ló bábú---
+            List<int> loHelye = new List<int>();
+            loHelye.Add(5);
+            loHelye.Add(5);
+
+            List<List<int>> loLepes = new List<List<int>>();
+            List<int> lepes3 = new List<int>();
+            lepes3.Add(2);
+            lepes3.Add(-1);
+            loLepes.Add(lepes3);
+            List<int> lepes4 = new List<int>();
+            lepes4.Add(2);
+            lepes4.Add(1);
+            loLepes.Add(lepes4);
+
+            List<int> lepes5 = new List<int>();
+            lepes5.Add(-2);
+            lepes5.Add(-1);
+            loLepes.Add(lepes5);
+            List<int> lepes6 = new List<int>();
+            lepes6.Add(-2);
+            lepes6.Add(1);
+            loLepes.Add(lepes6);
+
+            List<int> lepes7 = new List<int>();
+            lepes7.Add(1);
+            lepes7.Add(-2);
+            loLepes.Add(lepes7);
+            List<int> lepes8 = new List<int>();
+            lepes8.Add(1);
+            lepes8.Add(2);
+            loLepes.Add(lepes8);
+            List<int> lepes9 = new List<int>();
+            lepes9.Add(-1);
+            lepes9.Add(-2);
+            loLepes.Add(lepes9);
+            List<int> lepes10 = new List<int>();
+            lepes10.Add(-1);
+            lepes10.Add(2);
+            loLepes.Add(lepes10);
+
+            lo = new Babu(mezok, loHelye, loLepes, "\u265E");
+            //<------------------------------------->
+
+
+            //---Bástya bábú---
+            List<int> bastyaHelye = new List<int>();
+            bastyaHelye.Add(4);
+            bastyaHelye.Add(2);
+
+            List<List<int>> bastyaLepesLista = new List<List<int>>();
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> bastyaLepes = new List<int>();
+                bastyaLepes.Add(i);
+                bastyaLepes.Add(0);
+                bastyaLepesLista.Add(bastyaLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> bastyaLepes = new List<int>();
+                bastyaLepes.Add(-i);
+                bastyaLepes.Add(0);
+                bastyaLepesLista.Add(bastyaLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> bastyaLepes = new List<int>();
+                bastyaLepes.Add(0);
+                bastyaLepes.Add(i);
+                bastyaLepesLista.Add(bastyaLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> bastyaLepes = new List<int>();
+                bastyaLepes.Add(0);
+                bastyaLepes.Add(-i);
+                bastyaLepesLista.Add(bastyaLepes);
+            }
+
+            Bastya = new Babu(mezok, bastyaHelye, bastyaLepesLista, "\u265C");
+            //<------------------------------------->
+
+
+
+            //---Futó bábú---
+            List<int> futoHelye = new List<int>();
+            futoHelye.Add(7);
+            futoHelye.Add(3);
+
+            List<List<int>> futoLepesLista = new List<List<int>>();
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> futoLepes = new List<int>();
+                futoLepes.Add(i);
+                futoLepes.Add(i);
+                futoLepesLista.Add(futoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> futoLepes = new List<int>();
+                futoLepes.Add(-i);
+                futoLepes.Add(-i);
+                futoLepesLista.Add(futoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> futoLepes = new List<int>();
+                futoLepes.Add(i);
+                futoLepes.Add(-i);
+                futoLepesLista.Add(futoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> futoLepes = new List<int>();
+                futoLepes.Add(-i);
+                futoLepes.Add(i);
+                futoLepesLista.Add(futoLepes);
+            }
+            Futo = new Babu(mezok, futoHelye, futoLepesLista, "\u265D");
+            //<------------------------------------->
+
+
+            //---Király bábú---
+            List<int> kiralyHelye = new List<int>();
+            kiralyHelye.Add(4);
+            kiralyHelye.Add(3);
+
+            List<List<int>> kiralyLepesLista = new List<List<int>>();
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(i);
+                kiralyLepes.Add(0);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(-i);
+                kiralyLepes.Add(0);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(0);
+                kiralyLepes.Add(i);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(0);
+                kiralyLepes.Add(-i);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(i);
+                kiralyLepes.Add(i);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(-i);
+                kiralyLepes.Add(-i);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(i);
+                kiralyLepes.Add(-i);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            for (int i = 1; i <= 1; i++)
+            {
+                List<int> kiralyLepes = new List<int>();
+                kiralyLepes.Add(-i);
+                kiralyLepes.Add(i);
+                kiralyLepesLista.Add(kiralyLepes);
+            }
+            Kiraly = new Babu(mezok, kiralyHelye, kiralyLepesLista, "\u265A");
+            //<------------------------------------->
+
+
+            //---Királynő bábú---
+            List<int> kiralyNoHelye = new List<int>();
+            kiralyNoHelye.Add(2);
+            kiralyNoHelye.Add(7);
+
+            List<List<int>> kiralyNoLepesLista = new List<List<int>>();
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(i);
+                kiralyNoLepes.Add(0);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(-i);
+                kiralyNoLepes.Add(0);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(0);
+                kiralyNoLepes.Add(i);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(0);
+                kiralyNoLepes.Add(-i);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(i);
+                kiralyNoLepes.Add(i);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(-i);
+                kiralyNoLepes.Add(-i);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(i);
+                kiralyNoLepes.Add(-i);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            for (int i = 1; i <= 8; i++)
+            {
+                List<int> kiralyNoLepes = new List<int>();
+                kiralyNoLepes.Add(-i);
+                kiralyNoLepes.Add(i);
+                kiralyNoLepesLista.Add(kiralyNoLepes);
+            }
+            kiralyNo = new Babu(mezok, kiralyNoHelye, kiralyNoLepesLista, "\u265B");
+            //<------------------------------------->
+
         }
 
         private void TablaLetrehozasa()
